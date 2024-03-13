@@ -6,8 +6,10 @@
 /boot			emmc	/dev/block/bootdevice/by-name/boot
 /cache			ext4	/dev/block/bootdevice/by-name/cache
 /cust			ext4	/dev/block/bootdevice/by-name/cust								flags=display="Cust";backup=1;wipeingui;flashimg=1
-/data			f2fs	/dev/block/bootdevice/by-name/userdata								flags=display="Data"
+/data			f2fs	/dev/block/bootdevice/by-name/userdata								flags=display="Data";encryptable=footer;length=-16384
 /erecovery		emmc	/dev/block/bootdevice/by-name/erecovery								flags=display="eRecovery";backup=1;flashimg=1
+/firmware		vfat	/dev/block/bootdevice/by-name/modem								flags=display="Firmware";backup=1;mounttodecrypt
+/firmware_image		emmc	/dev/block/bootdevice/by-name/modem								flags=display="Modem";flashimg=1
 /misc			emmc	/dev/block/bootdevice/by-name/misc
 /persist		ext4	/dev/block/bootdevice/by-name/persist								flags=display="Persist";backup=1;flashimg=1
 /product		ext4	/dev/block/bootdevice/by-name/product								flags=display="Product";backup=1;wipeingui;flashimg=1

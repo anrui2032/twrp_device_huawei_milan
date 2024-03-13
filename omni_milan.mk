@@ -10,6 +10,9 @@ PRODUCT_RELEASE_NAME := milan
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
+# Inherit from milan device
+$(call inherit-product, device/huawei/milan/device.mk)
+
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
